@@ -325,7 +325,8 @@ class Transformer(nn.Module):
         assert stride[-1] == 1 and stride[-2] == 1, 'stride of source dimension must be 1'
 
         self.layer = nn.ModuleList([
-            TransformerLayer(in_channel, affinity_dim, target_proj_dim, nhead, mlp_ratio, input_corr_size, kernel_size, stride, padding, group)
+            TransformerLayer(in_channel, affinity_dim, target_proj_dim, nhead, mlp_ratio, input_corr_size, 
+                             kernel_size, stride, padding, group)
             for _ in range(depth)
         ])
 
@@ -341,7 +342,8 @@ class TransformerLayer(nn.Module):
         input_corr_size=(8, 8, 8, 8), kernel_size=(3, 3, 3, 3), stride=(2, 2, 1, 1), padding=(1, 1, 1, 1), group=1):
         super().__init__()
         self.nhead = nhead
-        self.qk = LinearConv4d(in_channel, in_channel, affinity_dim, target_proj_dim * 2, input_corr_size, kernel_size, stride, padding, group)
+        self.qk = LinearConv4d(in_channel, in_channel, affinity_dim, target_proj_dim * 2, input_corr_size,
+                               kernel_size, stride, padding, group)
         self.v = nn.Sequential(
             Conv4d(
                 in_channels=in_channel,
@@ -376,7 +378,8 @@ class TransformerLayer(nn.Module):
         H_s, W_s, H_t, W_t = v.shape[-4:]
         v = rearrange(v, 'B (H C) H_t W_t H_s W_s -> B (H_s W_s) H (C H_t W_t)', H=self.nhead)
 
-        attn = rearrange(self.attn(q, k, v), 'B (H_s W_s) H (C H_t W_t) -> B (H C) H_t W_t H_s W_s', H_s=H_s, W_s=W_s, H_t=H_t, W_t=W_t)
+        attn = rearrange(self.attn(q, k, v), 'B (H_s W_s) H (C H_t W_t) -> B (H C) H_t W_t H_s W_s', 
+                         H_s=H_s, W_s=W_s, H_t=H_t, W_t=W_t)
 
         x = x + attn
         x = x + self.mlp(self.norm2(x))
@@ -384,7 +387,8 @@ class TransformerLayer(nn.Module):
 
 # LinearConv4d definition (from transformer.py)
 class LinearConv4d(nn.Module):
-    def __init__(self, in_channel, out_channel, affinity_dim, target_proj_dim, input_corr_size=(8, 8, 8, 8),  kernel_size=(3, 3, 3, 3), stride=(2, 2, 2, 2), padding=(1, 1, 1, 1), group=1):
+    def __init__(self, in_channel, out_channel, affinity_dim, target_proj_dim, input_corr_size=(8, 8, 8, 8), 
+                 kernel_size=(3, 3, 3, 3), stride=(2, 2, 2, 2), padding=(1, 1, 1, 1), group=1):
         super().__init__()
 
         self.conv = nn.Sequential(
@@ -408,7 +412,8 @@ class LinearConv4d(nn.Module):
         assert len(x.shape) == 6, 'input should be in shape B C H_t W_t H_s W_s'
         assert len(affinity.shape) == 4, 'affinity should be in shape B C H_s W_s'
         x = self.conv(x)
-        x = torch.cat((rearrange(x, 'B C H_t W_t H_s W_s -> B (H_s W_s) (C H_t W_t)'), rearrange(affinity, 'B C H W -> B (H W) C')), dim=-1)
+        x = torch.cat((rearrange(x, 'B C H_t W_t H_s W_s -> B (H_s W_s) (C H_t W_t)'), 
+                       rearrange(affinity, 'B C H W -> B (H W) C')), dim=-1)
         x = self.linear(x)
         return x
 
