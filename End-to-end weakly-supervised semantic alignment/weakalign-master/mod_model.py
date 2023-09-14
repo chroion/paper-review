@@ -212,7 +212,8 @@ class GeometricTnf(object):
     ( can be used with no transformation to perform bilinear resizing )        
     
     """
-    def __init__(self, geometric_model='affine', tps_grid_size=3, tps_reg_factor=0, out_h=240, out_w=240, offset_factor=None, use_cuda=True):
+    def __init__(self, geometric_model='affine', tps_grid_size=3, tps_reg_factor=0, out_h=240, 
+                 out_w=240, offset_factor=None, use_cuda=True):
         self.out_h = out_h
         self.out_w = out_w
         self.geometric_model = geometric_model
@@ -234,7 +235,8 @@ class GeometricTnf(object):
         if use_cuda:
             self.theta_identity = self.theta_identity.cuda()
 
-    def __call__(self, image_batch, theta_batch=None, out_h=None, out_w=None, return_warped_image=True, return_sampling_grid=False, padding_factor=1.0, crop_factor=1.0):
+    def __call__(self, image_batch, theta_batch=None, out_h=None, out_w=None, return_warped_image=True, 
+                 return_sampling_grid=False, padding_factor=1.0, crop_factor=1.0):
         if image_batch is None:
             b=1
         else:

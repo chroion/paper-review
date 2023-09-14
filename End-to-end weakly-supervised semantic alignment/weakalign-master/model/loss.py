@@ -43,7 +43,8 @@ class TransformedGridLoss(nn.Module):
         return loss
 
 class WeakInlierCount(nn.Module):
-    def __init__(self, geometric_model='affine', tps_grid_size=3, tps_reg_factor=0, h_matches=15, w_matches=15, use_conv_filter=False, dilation_filter=None, use_cuda=True, normalize_inlier_count=False, offset_factor=227/210):
+    def __init__(self, geometric_model='affine', tps_grid_size=3, tps_reg_factor=0, h_matches=15, w_matches=15, use_conv_filter=False, 
+                 dilation_filter=None, use_cuda=True, normalize_inlier_count=False, offset_factor=227/210):
         super(WeakInlierCount, self).__init__()
         self.normalize=normalize_inlier_count
         self.geometric_model = geometric_model
