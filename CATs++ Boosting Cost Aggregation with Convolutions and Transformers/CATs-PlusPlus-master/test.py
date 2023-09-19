@@ -63,7 +63,7 @@ if __name__ == "__main__":
     with open(osp.join(args.pretrained, 'args.pkl'), 'rb') as f:
         args_model = pickle.load(f)
     log_args(args_model)
-    print(args.datapath, "asdasd")
+    
     # Dataloader
     download.download_dataset(args.datapath, args.benchmark)
     test_dataset = download.load_dataset(args.benchmark, args.datapath, args.thres, device, 'test', False, args_model.feature_size)
