@@ -3,9 +3,7 @@
 📚 Introduction  
 
 This repository is dedicated to deeply understanding and analyzing papers in the field of Artificial Intelligence, especially those related to Computer Vision, and their associated code. We share detailed reviews and analyses of the papers and their implementations.
-
-
-
+<br>
 
 🏫 UST ETRI School
 
