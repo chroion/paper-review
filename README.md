@@ -30,7 +30,7 @@ Ph.D Hyejin Kim (ETRI)
 <br/><br/>
 
 ## 📖 Reviewed Papers
-|Week|Title|Content|Reviewer|
+|Week|Page title|Content|Reviewer|
 |---|---|---|---|
 |1|End-to-end weakly-supervised semantic alignment|Semantic alignment algorithm by using Soft-inlier score|Kim Gibeom|
 |2|CATs++: Boosting Cost Aggregation with Convolutions and Transformers|Feature matching with new method of cost aggregation|Kim Gibeom|
