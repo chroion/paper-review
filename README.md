@@ -20,7 +20,7 @@ Focus on Computer Vision: We place a special emphasis on the Computer Vision fie
 ## 📌 Reviewers & Instructor
 
 ### Reviewers: 
-Gibeom Kim (UST) 
+[Gibeom Kim (UST)](https://github.com/chroion)
 <br/>
 Hyukseong Park (UST) 
 <br/>
