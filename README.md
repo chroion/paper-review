@@ -7,7 +7,7 @@ This repository is dedicated to deeply understanding and analyzing papers in the
 
 ## 🏫 UST ETRI School
 
-The activities of this repository are conducted under the auspices of the UST ETRI School. With the support of the ETRI School, we are actively engaged in reviewing and analyzing papers and their code.
+This repository was established based on the activities conducted at UST ETRI School, aiming to deeply understand and analyze the latest research and technological trends in artificial intelligence both domestically and internationally.
 <br/><br/>
 
 ## 🔍 Main Topics
