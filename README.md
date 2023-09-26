@@ -27,3 +27,12 @@ Hyukseong Park (UST)
 
 ### Instructor: 
 Ph.D Hyejin Kim (ETRI) 
+<br/><br/>
+
+## 📖 Reviewed Papers
+|Week|Title|Content|Reviewer|
+|---|---|---|---|
+|1|End-to-end weakly-supervised semantic alignment|Semantic alignment algorithm by using Soft-inlier score|Kim Gibeom|
+|2|CATs++: Boosting Cost Aggregation with Convolutions and Transformers|Feature matching with new method of cost aggregation|Kim Gibeom|
+|3|SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis|The latest stable diffusion model|Kim Gibeom|
+|4|Adding Conditional Control to Text-to-Image Diffusion Models|Conditioning method for stable diffusion model|Kim Gibeom|
