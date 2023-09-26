@@ -30,7 +30,7 @@ Dr. Hyejin Kim (ETRI)
 <br/><br/>
 
 ## 📖 Reviewed Papers
-|Week|Paper title|Content|Paper|Presentation|Reviewer|
+|#|Paper title|Content|Paper|Presentation|Reviewer|
 |---|---|---|---|---|---|
 |1|End-to-end weakly-supervised semantic alignment|Semantic alignment algorithm by using Soft-inlier score|[Link](https://github.com/chroion/paper-review/blob/main/End-to-end%20weakly-supervised%20semantic%20alignment/1712.06861.pdf)|[Link](https://github.com/chroion/paper-review/blob/main/End-to-end%20weakly-supervised%20semantic%20alignment/End-to-end%20weakly-supervised%20semantic%20alignment.pptx)|Gibeom Kim|
 |2|CATs++: Boosting Cost Aggregation with Convolutions and Transformers|Feature matching with new method of cost aggregation|[Link](https://github.com/chroion/paper-review/blob/main/CATs%2B%2B%20Boosting%20Cost%20Aggregation%20with%20Convolutions%20and%20Transformers/2202.06817v2.pdf)|[Link](https://github.com/chroion/paper-review/blob/main/CATs%2B%2B%20Boosting%20Cost%20Aggregation%20with%20Convolutions%20and%20Transformers/CATs%2B%2B%20Boosting%20Cost%20Aggregation%20with%20Convolutions%20and%20Transformers.pptx)|Gibeom Kim|
