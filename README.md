@@ -19,8 +19,12 @@ Focus on Computer Vision: We place a special emphasis on the Computer Vision fie
 
 ## 📌 Reviewers & Instructor
 
-Reviewers: <br/>
-Gibeom Kim (UST) <br/>
-Hyukseong Park (UST) <br/>
-Instructor: <br/>
+Reviewers: 
+<br/>
+Gibeom Kim (UST) 
+<br/>
+Hyukseong Park (UST) 
+<br/>
+Instructor: 
+<br/>
 Ph.D Hyejin Kim (ETRI) 
