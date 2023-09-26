@@ -24,7 +24,7 @@ Focus on Computer Vision: We place a special emphasis on the Computer Vision fie
 Gibeom Kim (UST) 
 <br/>
 Hyukseong Park (UST) 
-<br/><br/>
+<br/><br/><br/>
 ### Instructor: 
 <br/>
 Ph.D Hyejin Kim (ETRI) 
