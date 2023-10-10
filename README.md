@@ -26,7 +26,7 @@ Hyukseong Park (UST)
 <br/>
 
 ### Instructor: 
-Dr. Hyejin Kim (ETRI) 
+Prof. Hyejin S. Kim (ETRI) 
 <br/><br/>
 
 ## 📖 Reviewed Papers
