@@ -75,52 +75,9 @@ class WatsonDistanceFft(nn.Module):
             w_phase[self.weight_size[1] - 1, 0] = 0.
         return w_phase
     
-    """def forward(self, input, target):
-        # fft
-        c0 = self.fft(target)
-        c1 = self.fft(input)
-        
-        N, K, H, W, _ = c0.shape
-        
-        # get amplitudes
-        c0_amp = torch.norm(c0 + EPS, p='fro', dim=4)
-        c1_amp = torch.norm(c1 + EPS, p='fro', dim=4)
-        
-        # luminance masking
-        avg_lum = torch.mean(c0_amp[:,:,0,0])
-        t_l = self.t.view(1, 1, H, W).expand(N, K, H, W)
-        t_l = t_l * (((c0_amp[:,:,0,0] + EPS) / (avg_lum + EPS)) ** self.alpha).view(N, K, 1, 1)
-        
-        # contrast masking
-        s = softmax(t_l, (c0_amp.abs() + EPS)**self.w * t_l**(1 - self.w))
-        
-        # pooling
-        watson_dist = (((c0_amp - c1_amp) / s).abs() + EPS) ** self.beta
-        watson_dist = self.dropout(watson_dist) + EPS
-        watson_dist = torch.sum(watson_dist, dim=(1,2,3))
-        watson_dist = watson_dist ** (1 / self.beta)
-        
-        # get phases
-        c0_phase = torch.atan2( c0[:,:,:,:,1], c0[:,:,:,:,0] + EPS) 
-        c1_phase = torch.atan2( c1[:,:,:,:,1], c1[:,:,:,:,0] + EPS)
-        
-        # angular distance
-        phase_dist = torch.acos(torch.cos(c0_phase - c1_phase)*(1 - EPS*10**3)) * self.w_phase # we multiply with a factor ->1 to prevent taking the gradient of acos(-1) or acos(1). The gradient in this case would be -/+ inf
-        phase_dist = self.dropout(phase_dist)
-        phase_dist = torch.sum(phase_dist, dim=(1,2,3))
-        
-        # perceptual distance
-        distance = watson_dist + phase_dist
-        
-        # reduce
-        if self.reduction == 'sum':
-            distance = torch.sum(distance)
-        
-        return distance"""
-    
     def forward(self, input):
+        # fft
         c1 = self.fft(input)
-        
         
         return c1
     

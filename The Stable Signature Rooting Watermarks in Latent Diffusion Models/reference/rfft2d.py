@@ -39,10 +39,10 @@ class Rfft2d(nn.Module):
         The last dimension is pytorches representation of complex values
         """
         
-        (C, H, W) = x.shape
+        (N, C, H, W) = x.shape
         assert (C == 1), "FFT is only implemented for a single channel"
         assert (H >= self.blocksize), "Input too small for blocksize"
-        # assert (W >= self.blocksize), "Input too small for blocksize"
+        assert (W >= self.blocksize), "Input too small for blocksize"
         assert (H % self.stride == 0) and (W % self.stride == 0), "FFT is only for dimensions divisible by the blocksize"
         
         # unfold to blocks
@@ -69,7 +69,7 @@ class Rfft2d(nn.Module):
         
         # perform iRFFT
         x = fft.irfft(coeff, dim=2, signal_sizes=(self.blocksize, self.blocksize))
-        (k, _, _) = x.shape
+        (N, k, _, _) = x.shape
         x = x.permute(0,2,3,1).view(-1, self.blocksize**2, k)
         x = F.fold(x, output_size=(output_shape[-2], output_shape[-1]), kernel_size=self.blocksize, padding=0, stride=self.blocksize)
         return x * (self.blocksize**2)

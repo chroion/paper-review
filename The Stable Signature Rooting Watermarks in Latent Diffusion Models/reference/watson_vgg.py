@@ -46,7 +46,7 @@ class VggFeatureExtractor(nn.Module):
         h = self.slice5(h)
         h_relu5_3 = h
 
-        return [h_relu1_2, h_relu2_2, h_relu3_3, h_relu4_3, h_relu5_3]
+        return [h_relu5_3]
 
 
 def normalize_tensor(t):
