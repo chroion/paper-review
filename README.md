@@ -26,6 +26,8 @@ Focus on Computer Vision: We place a special emphasis on the Computer Vision fie
 <br/>
 [Hyeonkyeong Kwon (Korea Univ.)](https://github.com/K-julius)
 <br/>
+[Seungwan Woo (UST)](https://github.com/SeungwanWoo-git)
+<br/>
 
 ### Instructor: 
 Prof. Hyejin S. Kim (ETRI) 
