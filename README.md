@@ -57,3 +57,5 @@ Prof. Hyejin S. Kim (ETRI)
 |19|Rich Human Feedback for Text-to-Image Generation|-|-|-|Seungwan Woo|08/20/24|
 |20|VBAD Industrially Scalable Anomaly Detection|Binning anomlay detection|[Link](https://github.com/chroion/paper-review/blob/main/VBAD%20Industrially%20Scalable%20Anomaly%20Detection/VBAD%20Industrially%20Scalable%20Anomaly%20Detection.pdf)|-|Gibeom Kim|09/10/24|
 |21|Material Recognition in the Wild with the Materials in Context Database|-|-|-|Seungwan Woo|09/23/24|
+|22|Learning to (Learn at Test Time) RNNs with Expressive Hidden States|Apply machine learning on hidden state|[Link](https://github.com/chroion/paper-review/blob/main/Learning%20to%20(Learn%20at%20Test%20Time)%20RNNs%20with%20Expressive%20Hidden%20States/2407.04620v2.pdf)|[Link](https://github.com/chroion/paper-review/blob/main/Learning%20to%20(Learn%20at%20Test%20Time)%20RNNs%20with%20Expressive%20Hidden%20States/Learning%20to%20(Learn%20at%20Test%20Time)%20RNNs%20with%20Expressive%20Hidden%20States.pptx)|Gibeom Kim|09/10/24|
+
